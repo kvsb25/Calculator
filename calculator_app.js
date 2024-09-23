@@ -6,10 +6,8 @@ let calculation = '';
 let stack = []; // to track parenthesis
 
 const updateDisplay = () => {
-    // display.innerHTML = calculation; // original function
-
-    // below code is to show '%' instead of '/100*' on display
     if ((typeof calculation != 'number')) {
+        // below code is to show '%' instead of '/100*' on display
         let str = [];
         for (let i = 0; i < calculation.length; i++) {
             str.push(calculation[i]);
