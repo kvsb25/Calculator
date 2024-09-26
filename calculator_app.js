@@ -97,6 +97,26 @@ const isDigit = (s) => {
     }
 }
 
+display.addEventListener("click", ()=>{
+    let calcCopy = calculation.toString();
+    let tempArr = [];
+
+    for (let i = 0; i<calcCopy.length; i++)
+    {
+        tempArr.push(calcCopy[i]);
+    }
+    tempArr.pop();
+
+    let temp = '';
+
+    for (ele of tempArr) {
+        temp += ele;
+    }
+
+    calculation = temp;
+    updateDisplay();
+});
+
 numbers.forEach((number) => {
     number.addEventListener("click", () => {
         calculation += number.innerText;
